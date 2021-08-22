@@ -1,6 +1,6 @@
 {
   "name": "web-extension-starter",
-  "version": "0.0.19",
+  "version": "0.0.55",
   "description": "Web extension starter using react and typescript",
   "private": true,
   "repository": "https://github.com/abhijithvijayan/web-extension-starter.git",
@@ -22,12 +22,13 @@
     "build:firefox": "cross-env NODE_ENV=production cross-env TARGET_BROWSER=firefox webpack",
     "build:opera": "cross-env NODE_ENV=production cross-env TARGET_BROWSER=opera webpack",
     "build": "yarn run build:chrome && yarn run build:firefox && yarn run build:opera",
-    "repro": "npm version patch && yarn build:chrome",
+    "repro": "npm version patch --no-git-tag-version && yarn build:chrome",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.0",
+    "@types/chrome": "0.0.154",
     "advanced-css-reset": "^1.2.2",
     "emoji-log": "^1.0.2",
     "react": "^17.0.2",
