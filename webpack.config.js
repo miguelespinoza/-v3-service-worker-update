@@ -62,6 +62,7 @@ module.exports = {
     manifest: path.join(sourcePath, 'manifest.json'),
     '../background': path.join(sourcePath, 'Background', 'index.ts'),
     contentScript: path.join(sourcePath, 'ContentScript', 'index.ts'),
+    iframe: path.join(sourcePath, 'ContentScript', 'iframe.ts'),
     popup: path.join(sourcePath, 'Popup', 'index.tsx'),
     options: path.join(sourcePath, 'Options', 'index.tsx'),
   },
@@ -169,6 +170,13 @@ module.exports = {
       chunks: ['options'],
       hash: true,
       filename: 'options.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(viewsPath, 'iframe.html'),
+      inject: 'body',
+      chunks: ['iframe'],
+      hash: true,
+      filename: 'iframe.html',
     }),
     // write css file(s) to build folder
     new MiniCssExtractPlugin({filename: 'css/[name].css'}),

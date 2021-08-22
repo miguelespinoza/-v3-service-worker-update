@@ -16,7 +16,9 @@
 
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "scripting",
+    "commands"
   ],
 
   "__chrome|firefox__author": "abhijithvijayan",
@@ -43,13 +45,24 @@
     "service_worker": "background.bundle.js"
   },
 
-  "content_scripts": [{
-    "matches": [
-      "http://*/*",
-      "https://*/*"
-    ],
-    "js": [
-      "js/contentScript.bundle.js"
-    ]
-  }]
+  "commands": {
+    "toggle-iframe": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space",
+        "mac": "Command+Shift+Space"
+      },
+      "description": "Toggle iFrame ExecuteScript"
+    }
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "iframe.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }

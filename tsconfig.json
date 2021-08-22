@@ -8,10 +8,15 @@
 			"dom.iterable",
 			"esnext"
 		],
+		"types": [
+			"chrome",
+			"node"
+		],
 		"declaration": false,
 		"isolatedModules": true,
 		/* Additional Checks */
 		"useDefineForClassFields": true,
+		"noEmit": true,
 		"skipLibCheck": true,
 	},
 	"include": [
