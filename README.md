@@ -4,6 +4,8 @@
 I'm building an extension using Chrome's new Manifest v3. I discovered a scenario where the service worker seems to go "stale". Specifically, the manifest version I'm bundling into the JS code is not updating on extension update. 
 I'm sharing an example project to help identify the reason for this odd situation.
 
+⚠️ IMPORTANT: In my project, the service worker stops working entirely. I'm unable to listen to events from `chrome.commands.onCommand`  or `chrome.action.onClicked` The only remedy is to remove the extension and reinstall.
+
 ## Steps to Reproduce.
 1. Build this project `yarn; yarn build:chrome`
 2. Install the project into Chrome using Developer mode `chrome://extensions`: build artifact is located in `~/extension/chrome.zip`
