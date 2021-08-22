@@ -13,7 +13,6 @@ I'm sharing an example project to help identify the reason for this odd situatio
 4. This adds an empty iFrame. You should see two console.logs 
 ```
 1. contentScript.bundle.js executed, next up iframe load
-iframe.bundle.js
 2. iframe.html executed
 ```
 5. Now, go back to the project and rebuild by bumping package version. Use script `yarn repro`. This bumps the patch version and rebuilds
