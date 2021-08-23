@@ -29,6 +29,10 @@ This is the problem.
 I've boiled it down to the iFrame loading being the problem, as for the reason, that's unclear.
 Removing the iFrame code does not cause the issue above.
 
-For more context, visit the stackoverflow question:
+## For more context:
+
+**stackoverflow question:**
 https://stackoverflow.com/questions/68876486/manifest-v3-background-service-worker-seems-to-go-stale-how-to-verify-this-is-t
 
+**chromium bug report:**
+https://bugs.chromium.org/p/chromium/issues/detail?id=1242225
